@@ -1,7 +1,12 @@
 version: "v2.27.0-desktop.2"
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: "Dockerfile.prod"
     container_name: web
-    ports: 
+    ports:
       - '3000:3000'
+    volumes:
+      - .:/apps/web
+      - /apps/web/node_modules

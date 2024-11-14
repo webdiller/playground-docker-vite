@@ -16,7 +16,7 @@ function App() {
         </a>
       </div>
       {import.meta.env.VITE_APP_TITLE}
-      <h1>Vite + React 22</h1>
+      <h1>Vite + React 123</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
