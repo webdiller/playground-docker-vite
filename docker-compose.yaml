@@ -3,10 +3,9 @@ services:
   web:
     build:
       context: .
-      dockerfile: "Dockerfile.prod"
+      dockerfile: Dockerfile.prod
     container_name: web
     ports:
-      - '3000:3000'
+      - '3000:80' # Map host port 3000 to container port 80
     volumes:
-      - .:/apps/web
-      - /apps/web/node_modules
+      - .:/apps/web # Only needed if you want to make changes and rebuild
